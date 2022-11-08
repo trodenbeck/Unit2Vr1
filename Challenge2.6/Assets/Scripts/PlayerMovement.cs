@@ -20,8 +20,14 @@ public class PlayerMovement : MonoBehaviour
         transform.Translate(xMove * Time.deltaTime);
         yMove = new Vector2(0.0f, Input.GetAxis("Vertical"));
         transform.Translate((yMove * 10) * Time.deltaTime);
-        Vector2 flip = new Vector2(-1.0f, 1.0f);
-        transform.localScale *= flip;
+        if (Input.GetAxis("Horizontal") < 0)
+        {
+            transform.localScale = new Vector2(-5.0f,5.0f);
+        }
+        if (Input.GetAxis("Horizontal") > 0)
+        {
+            transform.localScale = new Vector2(5.0f,5.0f);
+        }
 
     }
 }
