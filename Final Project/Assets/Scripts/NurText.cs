@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class AcornText : MonoBehaviour
+public class NurText : MonoBehaviour
 {
-    public Text acornText;
+    public Text nutCountText;
     void Update()
     {
-        acornText.text = ": " + Acorn_Collection.AcornCount;
+        nutCountText.text = ": " + PlayerMovement.nutCount;
     }
 }

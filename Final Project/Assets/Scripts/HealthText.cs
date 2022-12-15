@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class AcornText : MonoBehaviour
+public class HealthText : MonoBehaviour
 {
-    public Text acornText;
+    public Text healthText;
     void Update()
     {
-        acornText.text = ": " + Acorn_Collection.AcornCount;
+        healthText.text = ": " + PlayerMovement.health;
     }
 }
